@@ -13,7 +13,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        // Bundle
+//        print((Bundle.main.bundleURL))
+//        Bundle.main.path(forResource: "database", ofType: "plist")
+//        print(NSArray(contentsOf: Bundle.main.path(forResource: "database", ofType: "plist")))
+        // document or library
+//       print(NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0])
+        // url
+        print(FileManager.default.urls(for: .libraryDirectory, in: .userDomainMask)[0])
+        
         return true
     }
 
